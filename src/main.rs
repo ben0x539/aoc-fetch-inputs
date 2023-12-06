@@ -94,7 +94,7 @@ fn fetch_input(
     target_directory: &Path,
     day: i32,
 ) -> Result<bool> {
-    let dest_path = target_directory.join(&format!("day-{day:02}-input.txt"));
+    let dest_path = target_directory.join(&format!("input-day-{day:02}.txt"));
 
     if let Ok(m) = fs::metadata(&dest_path) {
         if m.is_file() {
